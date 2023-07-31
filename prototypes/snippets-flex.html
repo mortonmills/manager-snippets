@@ -1,0 +1,143 @@
+
+<style>
+  .box {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+  }
+
+  .card{
+    background-color:white;
+    width:250px;
+    border-bottom: 1px solid #ddd;
+    padding:8px 5px 8px 5px
+  }
+  .title {
+    font-size:20px;
+  }
+
+  .lang {
+    color:grey;
+  }
+
+  .date {
+    color:grey;
+    float: right;
+  }
+  
+  
+</style>
+
+<div class="box">
+  
+
+
+
+<div id="test"></div>
+
+<script>
+  //console.time()
+  //console.timeEnd()
+  console.clear()
+  console.log("test")
+
+  function test(){
+
+    let snippets = [
+      {
+        title: "Spinner",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "Spark",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "undue",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "more than",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "gorin",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "\"habadasher\nasfasdf\"",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+    ]
+
+    let test = document.getElementById("test")
+    let snippetArr = []
+
+    for (const snippet of snippets){
+      let card = `
+<div class="card">
+<span class="title">${snippet.title}</span>
+<br>
+<br>
+<span class="lang">${snippet.lang}</span> 
+<span class="date">${snippet.date}</span>
+  </div>
+`
+      snippetArr.push(card)
+
+    }
+
+
+
+    test.innerHTML = snippetArr.join("")
+
+  }
+  test()
+</script>
+
+
+
+<div>
+  <div id="title">
+    TITLE
+  </div>
+
+  <div id= "taglist">
+    <span class="tags">tags</span>   <span class="tags">tags</span>   <span class="tags">tags</span>
+  </div>
+  <hr>
+
+ 
+  <div>
+    Description: <span id="description">texthere</span>
+  </div>
+
+  <div>
+    Author: <span id="author">texthere</span>
+  </div>
+
+  <div>
+    Source: <span id="source">texthere</span>
+  </div>
+  <hr>
+
+  <textarea id="codeText" wrap="soft" rows="35" cols="105" disabled>
+  </textarea>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+

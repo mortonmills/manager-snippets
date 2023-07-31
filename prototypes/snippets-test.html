@@ -1,0 +1,102 @@
+
+<style>
+  .card{
+    background-color:white;
+    width:250px;
+    border-bottom: 1px solid #ddd;
+    padding:8px 5px 8px 5px
+  }
+  .title {
+    font-size:20px;
+  }
+
+  .lang {
+    color:grey;
+  }
+
+  .date {
+    color:grey;
+    float: right;
+  }
+
+
+</style>
+
+<span id="test"></span>
+
+<script>
+  //console.time()
+  //console.timeEnd()
+  console.clear()
+  console.log("test")
+
+  function test(){
+
+    let snippets = [
+      {
+        title: "Spinner",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "Spark",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "undue",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "more than",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "gorin",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+      {
+        title: "habadasher",
+        lang: "javascript",
+        date: "12/12/01",
+      },
+    ]
+
+    let test = document.getElementById("test")
+    let snippetArr = []
+
+    for (const snippet of snippets){
+      let card = `
+<div class="card">
+<span class="title">${snippet.title}</span>
+<br>
+<br>
+<span class="lang">${snippet.lang}</span> 
+<span class="date">${snippet.date}</span>
+  </div>
+`
+      snippetArr.push(card)
+
+    }
+
+
+
+    test.innerHTML = snippetArr.join("")
+
+  }
+  test()
+</script>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+Name - one-liner explanation of code	
+Language - what language they are coded on	
+Dependencies: what libraries of framework does the snippet depend	
+the code	
+Description - Multi-line explanation of what the code does	
+Keywords: helps to find the snippets for search engine	
+Tags - List of tags to organize the code snippet	
+URL where found include page section id
+
+title
+lang
+dependency
+snippet
+description
+tags
+source
+related
+
+description
+documentation
+search bar
+styling
+tags
+one or more related code snippets
+add a title
+tags to it
+(optionally) a source URL for your inspiration
+and comments about the snippets.
+
+VS CODE JSON STRUCTURE
+  "Snippet name": {
+    "scope": "language1, language2" 
+    "prefix": ["trigger word 1, trigger word 2"],
+    "body": ["your code snippet"],
+    "description": "description of the code"
+  }
+}
+

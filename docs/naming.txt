@@ -1,0 +1,44 @@
+  /*
+Functions for generating and setting innerHTML
+SETHTML
+Functions for creating events
+SETEVENT
+
+MAIN SECTION is BOX
+This applies to the sidebar and card section
+There are 3 sections of DOM
+CARD
+SIDEBAR
+SNIPPET
+
+First create HTML
+Then set Events
+
+
+The primary section the CARDS
+The CARDS are built off the SNIPPETS JSON.
+Then the SIDEBAR is built off the CARDS section.
+
+  
+NAMING CONVENTION
+setHTMLCards()
+setEventCards()
+
+setEvent
+setHTML
+
+Card
+Sidebar
+Snippet
+
+DOM OBJ
+Box
+
+Sidebar
+Snippets
+Obj
+
+groups
+html
+obj
+*/

@@ -1,1 +1,4 @@
-# manager-snippets
+```mermaid
+graph TB
+a--->b
+```

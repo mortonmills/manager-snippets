@@ -1,0 +1,192 @@
+NEW 
+Quick text editor with Monaco and Codemirror
+Make chromium browser Id for syncing devtools snippets
+Getting snippets into and out of devtools
+Extension for search highlighted text in browser keyboard shortcut
+Create visualizations of JavaScript code learned
+Functions are mini scripts
+Generating possible outcomes
+Need syntax and possible relationships in JavaScript
+Simple design patterns that both work and don’t work, function in a loop, loop in a function
+List use cases
+Place samples in file and import into devtools for testing for better mechanics comprehension, analyze call stack and live watch expressions
+Sample code pieces for understanding how JavaScript works
+
+master snippets include performance and readability
+Separate document or in page
+Snippet library is modules of features
+Ability to drag and around snippet blocks and stack them according to script execution
+Tag as variables functions or executables 
+
+need a snippet library to organize first
+save snippets
+Updating object and saving set and get
+make files and directories loopable, add as snippets into library
+checkbox capable of bundling files through selection in snippet library
+How to store snippet library, json, browser cache, and cloud how to recover if deleted
+Tagging system, base tags, language library and application, supplementary tags
+
+
+
+
+OPEN
+add diagram to readme
+rename and break up functions and variables in right sequence
+remove nested functions if possible
+figure out how code execution happens, declaring variables in external vs internal.
+
+triple click contenteditable on new fields go back to first field, use maybe input field instead, 
+	may have to do with adding DOM node, the other fields work, they were innerHTML
+	Using "?????" as placeholder for new content, had strange behavior when clicking to highlight all text, 
+	had to use triple click whereas A-Z required only double click,
+	good use stackoverflow question
+
+update textarea to codemirror instance
+what happens with 4 outcomes, update, cancel, add card, and delete card
+current card and sidebar need fixing on card deletion
+	if last card deleted move up one
+	else card deleted move down one
+need to have scroll on overflow for all three boxes, page document should not scroll 
+lowercase names to keep tagging consistent
+add fields needs an auto overflow
+add alphabetical order filter and search bar
+create a preferences window, you can change the sidebar categories, also include preferences object
+long card titles overflow into snippet box
+make cards rearrangable,
+Undo delete button
+when deleting all cards need to have a blank card in place to maintain layout
+make object with color pallette for different styles and pass during eventlistener
+was getting a [Violation] Forced reflow while executing JavaScript took 32ms,
+	when click checkbox and then deselecting all checkboxes
+	maybe redo code and fix, adding async where possible, or not complete update
+change title name from card and maybe other fields
+when adding or deleting card need to update safe snippets
+	erases current progress during update, may have to do with cards all being undefined
+	will need to make parameter to create new cards from html card generator
+This can be fix by adding ids of slectall and deselect to queryall in the multibox function
+	will need to clean up code first
+	when using selectall, the snippet is not filled with multi fields until checkbox is clicked
+	need to have a checkbox click populate snippet
+want to save check box fields into safe snippet for keeping if needing to add or remove checked boxes
+	create an active class for cards that have checkbox is you want persistence
+	keep cards selected after update or add or delete
+Show jsperf comparison to similar alternatives
+
+function text how to
+make compatible with vs code
+use other snippet editor's docs to add features
+write natural language docs
+talk about picture break down essential features first, reverse engineering
+then write pseudo code for page during talk
+indexed db for saving without upload json
+maybe can improve ids for sidebar filters, in case multiple different files are brought in
+make split js a bundled script, might be intefering with code
+
+CLOSED
+bubbling // used currentTarget
+tag array
+flexbox 
+add download button json
+how to show number to side of tag groups
+Wire sidebar to cards for filtering, make new div for each, inner html on id, sort through array, make counter, list counter total next to div
+how to do tags and edit
+how to get arrays for innertext fields
+update object to be arrays for multiple value, ex author and sources and so on
+how to add new snippets and add to fields as array items
+Add button to make new snippets action, remove event listeners befpore adding neew ones
+add multi fields on works once //need to recall function at end of update
+how to delete empty fields in array HTML fields filter out blank innertext
+add main display all // must attach id to child of sidebarbox,
+card language seperate arr 
+make a currentSidebar variable with id, may not work becuase new fields are bing added and id number will be reset, 
+	may actual innerTExt instead, will have to use that in sidebarObj though
+sidebar and currentCard is getting reset after update, used click() on currentCard and currentSidebar
+	content addition is not appearing other cards during edit,  setaddField in the setEventFunction to relocate current card value
+adding snippets aren't updating, simply pushed new object and updated cards and sidebar
+	get parent of target, used event.target.parentNode.id, important to put id at end
+fix current card id and sidebar, not card0, use combo of lang and title, can you have spaces in id?, remove whitespace, returns and tabs
+	can only have one id, trim() only does outside, can use replace /\s/g, "", might be expensive, keep counter global and only add new content tags.
+	used replaced to fix for now
+!!!!!!cards should take on id of parent encapsulation ,how to delete snippets, BE CAREFUL since ids are not consistent, 
+	deleting based on id name could cause unintentional deletion
+deleting new cards removing them by half each time 16 8 4 2 1, guiving unique ids fixed problem,  cause of problem `card${counter++}`.replace(/\s+/g, "")
+create unique id system for current card and sidebar
+	same name can cause lots of issues
+update after adding a card
+json input, have json load as soon as opening up input
+use svg, put icons beside languages, use sprite sheet, generate css style sheet with object key and tag images with keys also
+make the add card better with new object or proper constructor
+edit multiple cards during an editing session, check setEventCards()
+when switching cards while editing resets editing
+setup function to make sure cards never share id, id can be more efficient and safer, will work as is// only a problem if mixing different snippet objects together
+put a class in span elements with required images
+fix naming conventions
+	make checkbox bigger
+	stopPropagation()
+added pointer finger for buttons and cards
+added multi select with background color change
+Cancel update button 
+when unchecking all boxes, currentcard is not reselected back to grey
+reset everything on unclick
+need to stop safesnippets from updating while boxes are checked 
+add new tags not working on checked update, added addsetfield() in checkbox main function
+when clicking checkbox render editable, only clicking does so during update, only clicking card in update shows add fields
+make content edit when going from card to check and back to card
+added line for fields to be visible again in both cancel and update button
+when updating after check renders card hidden until checking again
+maybe make delete card global in event card function, document.querySelectorAll(".deleteCard").forEach(el => el.addEventListener( 'click', deleteCard))
+in loadSnippet(), will need to fix for just languages, is adding class to other array fields
+cancel still shows when updating with checkbox, made again hidden during update click
+multi checkbox for mass delete or content update, have a select all or select none
+may need to fix for having multiple new cards out at once, add a counter for number ids, fixed during html generation
+and resizable bars, with hand cursor type
+
+PROBLEM
+flex box was not rendering on page.
+SOLUTION
+left the style tag in a external css file, caused the page to break
+
+PROBLEM
+could not iterate through object
+SOLUTION
+was using dot notation on a variable, use square brackets
+
+PROBLEM
+document.querySelector('.card').click() //won't work in cards script find out why
+
+PROBLEM
+could not use innertext on items in a queryselectorall array
+SOLUTION
+was using getelementid on items, only need to prefix, ex el.innerText
+
+PROBLEM
+could not use function another script
+SOLUTION
+seperate script needs to load before, function hoisting doesn't seem to work 
+
+PROBLEM
+could not get event listener to execute
+SOLUTION
+document.querySelectorAll uses CSS syntax in field, eg document.querySelectorAll(".deleteCard") NOT ("deleteCard") for class
+
+PROBLEM
+could not get event listener to execute
+SOLUTION
+was using a parentElement to remove parent card, had <button class="deleteCard"><b>X</b></button>, 
+the bold tag was creating an extra layer, intefering with button and card
+
+PROBLEM
+svgs won't set to size when done through inkscape
+SOLUTION
+????https://stackoverflow.com/a/39062462
+not sure, different svgs will shrink, others won't
+
+
+
+
+
+
+
+
+
+

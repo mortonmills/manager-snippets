@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="styles/snippets.css">
+<title>SNIPPETS</title>
+<!--
+<script type="module">
+import Split from './scripts/split.js'
+
+Split(['#sidebarBox', '#cardBox', '#snippetBox'], {
+    maxSize: 1000,
+    gutterSize: 30,
+    snapOffset: 1,
+})
+
+</script>
+
+<style>
+.split {
+    display: flex;
+    flex-direction: row;
+    border:solid grey 1px;
+}
+
+.gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: col-resize;
+}
+</style>
+-->
+<!-- --> 
+<script src="scripts/snippets-declaration.js" defer></script> 
+
+<script src="scripts/snippets-cards.js" defer></script>
+<script src="scripts/snippets-cards-checked.js" defer></script>
+<script src="scripts/snippets-cards-events.js" defer></script>
+<script src="scripts/snippets-cards-add.js" defer></script>
+
+<script src="scripts/snippets-sidebar.js" defer></script>
+<script src="scripts/snippets-sidebar-events.js" defer></script>
+
+<script src="scripts/snippets-add-field.js" defer></script>
+<script src="scripts/snippets-snippet.js" defer></script>
+
+<script src="scripts/snippets-input.js" defer></script>
+<script src="scripts/snippets-output.js" defer></script>
+
+<script src="scripts/snippets-init.js" defer></script>
+
+
+
+</head>
+
+<body>
+
+<input id="fileInput" type="file">
+<button id="editSnippet">Edit</button>
+<button style="visibility:hidden" id="cancelUpdate">CANCEL</button>
+<button id="deleteSelected">DELETE SELECTED</button>
+<button id="selectAll">Select All</button>
+<button id="deselectAll">Deselect All</button>
+<button id="addCard">Add Card</button>
+<button id="downloadJSON">Download JSON</button>
+<br>
+
+<!-- --> 
+<div class="box split">
+  
+<div id="sidebarBox">
+</div>
+  
+  <div id="cardBox">
+  </div>
+  
+  
+  
+  
+
+  <div id="snippetBox">
+    <div>
+    Title: <span id= "title"></span>
+    </div>
+
+    <div>
+      Language: <span id= "lang"></span>
+    </div>
+
+    <div>
+	Tags: <span id= "tags"></span>
+    </div>
+    <hr>
+
+
+    <div>
+      Description: <span id="description"></span>
+    </div>
+
+    <div>
+      Author: <span id="author"></span>
+    </div>
+
+    <div>
+      Source: <span id="source"></span>
+    </div>
+    <hr>
+
+    <textarea id="codeText" wrap="soft" rows="35" cols="135" disabled>
+    </textarea>
+    
+  </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+
+  /* MAIN PAGE */
+
+  .box {
+    display: flex;
+justify-content: center;
+    border: 1px solid black;
+    height:95%;/* remove top buttons from box*/
+  }
+  
+  #snippetBox, #cardBox, #sidebarBox{
+overflow-x: hidden;
+overflow-y: scroll;
+  height: 800px;
+  }
+
+
+  /* CARDS (MIDDLE SECTION) */
+  
+  .card{
+    background-color:white;
+    width:330px;
+    border-bottom: 1px solid #c7c7c7;
+    padding:8px 5px 8px 5px;
+    cursor: pointer;
+  }
+  .titleCard {
+    font-size:20px;
+  }
+
+  .lang {
+    color:grey;
+  }
+  
+      .checkBox{
+float:left;
+ cursor: pointer;
+ width: 35px;
+     height:35px;
+  }
+  
+      .deleteCard {
+    width: 25px;
+    float: right;
+     cursor: pointer;
+  }
+
+  .date {
+    color:grey;
+    float: right;
+  }
+  
+
+
+
+   /* SNIPPET (RIGHT SECTION) */
+
+  #title {
+    font-size:24px;
+    padding: 10px 0px;
+    display:inline-block;
+  }
+  
+    #lang {
+    font-size:16px;
+    padding:  0px 0px 10px 0px;
+  }
+
+  .tagsList {
+    background-color:#f0f0f0;
+    border: 1px solid #ececec;
+    padding: 2px 8px;
+    border-radius:5px;
+  }
+  
+  /* SIDEBAR (LEFT SECTION) */
+  
+  #sidebarBox{
+    width:230px;
+    height:800px;
+    background-color:#eaeaea;
+        padding: 60px 0px 0px 0px;
+  }
+
+  .cardGroupTitle{
+    color:#9c9c9c;
+    font-size: 14px;
+    padding: 0px 10px;
+
+  }
+
+  .sidebarBoxes {
+    display: flex;
+    justify-content: space-between;
+   /* border: 1px solid orange;*/
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+
+    /*
+    align-items: center;
+    text-align: start;
+    U+1F310
+    */
+
+  }
+
+  .sidebarBoxes > div{
+    padding: 5px 0px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+/**/
+  #main::before {
+    content:  url('../images/python-original.svg');
+        display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+
+  #foldersGroup > div::before {
+    content:  url('../images/python-original.svg');
+        display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+
+  #tagsGroup > div::before {/*icons can take up uneven space*/
+    content:  url('../images/python-original.svg');
+        display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+
+  #langGroup > div::before {/*icons can take up uneven space*/
+    content:  url('../images/javascript-original.svg');
+        display: inline-block;
+    width: 15px;
+    height: 15px;
+
+  }
+  
+  
+  /*ICONS FOR LANGUAGES*/
+    .python::before {/*icons can take up uneven space*/
+    content:  url('../images/python-original.svg');
+        display: inline-block;
+    width: 35px;
+    height: 35px;
+  }
+
+  .javascript::before {/*icons can take up uneven space*/
+    content:  url('../images/javascript-original.svg');
+        display: inline-block;
+    width: 35px;
+    height: 35px;
+
+  }
+  .html::before {/*icons can take up uneven space*/
+    content:  url('../images/html5-original.svg');
+        display: inline-block;
+    width: 35px;
+    height: 35px;
+
+  }
+    .css::before {/*icons can take up uneven space*/
+    content:  url('../images/css3-original.svg');
+        display: inline-block;
+    width: 35px;
+    height: 35px;
+
+  }
+  
+
+
